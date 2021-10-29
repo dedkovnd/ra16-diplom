@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { Header } from "./components/sections/Header";
 import { Footer } from "./components/sections/Footer";
-import { Main } from "./components/Main";
+import { Main } from "./components/sections/Main";
 import { Catalog } from "./components/sections/Catalog";
 import { About } from "./components/static/About";
 import { Contacts } from "./components/static/Contacts";

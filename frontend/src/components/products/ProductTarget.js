@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useJsonFetch } from "../../services/useJsonFetch";
 import { useDispatch } from "react-redux";
 import { addCart } from "../../redux/actions/actionCreators";
+import { Error } from "../elements/Error";
 import defaultImg from "../../img/default-img.png";
 
 export const ProductTarget = () => {
@@ -58,7 +59,8 @@ export const ProductTarget = () => {
 
   return (
     <>
-      {data !== null && !isLoading && (
+      {error && <Error text={error.message}/>}
+      {data !== null && !error && !isLoading && (
         <main className="container">
           <section className="catalog-item">
             <h2 className="text-center">{data.title}</h2>
